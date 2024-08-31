@@ -12,6 +12,11 @@ const io = new Server(server, {
   },
 });
 
+
+app.get('/api/hello', (req, res) => {
+  res.send('Hello World');
+});
+
 let roomData = {};
 
 io.on('connection', (socket) => {
